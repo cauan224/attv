@@ -6,33 +6,47 @@ public class attv3 {
         Scanner ler = new Scanner(System.in);
 
         System.out.println("digite seu nome: ");
-        String nome= ler.nextLine();
+        String nome = ler.nextLine();
+        double nota1, nota2;
 
-        System.out.println("digite sua nota: ");
-        double nota1= ler.nextDouble();
 
-        System.out.println("digite a segunga nota: ");
-        double nota2= ler.nextDouble();
+        do {
 
-        double media = (nota1 + nota2) / 2;
+            System.out.println("digite sua nota: ");
+            nota1 = ler.nextDouble();
+        } while (nota1 < 0 || nota1 > 10);
+        {
 
-        String resultado;
-        if (media >= 7) {
-            resultado = "Aprovado";
-        } else if (media >= 5&& media <6.9) {
-            resultado = "Verificaçao Suplementar";
-        } else {
-            resultado = "Reprovado";
+
+            do {
+                System.out.println("digite a segunga nota: ");
+                nota2 = ler.nextDouble();
+            } while (nota2 < 0 || nota2 > 10);
+
+
+            double media = (nota1 + nota2) / 2;
+
+
+            String resultado;
+            if (media >= 7) {
+                resultado = "Aprovado";
+            } else if (media >= 5 && media < 6.9) {
+                resultado = "Verificaçao Suplementar";
+            } else {
+                resultado = "Reprovado";
+            }
+
+            System.out.println("\n=apresentado dadaos");
+            System.out.println("Nome: " + nome);
+            System.out.println("Primeira nota: " + nota1);
+            System.out.println("Segunda nota: " + nota2);
+            System.out.println("Média: " + media);
+            System.out.println("Resultado: " + resultado);
+
+            ler.close();
         }
-
-        System.out.println("\n=apresentado dadaos");
-        System.out.println("Nome: " + nome);
-        System.out.println("Primeira nota: " + nota1);
-        System.out.println("Segunda nota: " + nota2);
-        System.out.println("Média: " + media);
-        System.out.println("Resultado: " + resultado);
-
-        ler.close();
     }
-
 }
+
+
+
