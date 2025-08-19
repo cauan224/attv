@@ -1,16 +1,12 @@
 package org.example;
 
+import org.example.exercio3.Endereco;
+
 public class cliente {
-    private  String nome;
+    private String nome;
     private int idade;
+    private Endereco endereco;
 
-    // Construtor.
-    public cliente(String nome, int idade) {
-        this.nome = nome;
-        this.idade = idade;
-    }
-
-    //metodos da classe
     public String getNome() {
         return nome;
     }
@@ -19,7 +15,6 @@ public class cliente {
         this.nome = nome;
     }
 
-
     public int getIdade() {
         return idade;
     }
@@ -27,4 +22,31 @@ public class cliente {
     public void setIdade(int idade) {
         this.idade = idade;
     }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public cliente(String nome, int idade, Endereco endereco) {
+        this.nome = nome;
+        this.idade = idade;
+        this.endereco = endereco;
+
+
+    }
+
+    @Override
+    public String toString() {
+        return "cliente{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", endereco=" + endereco +
+                '}';
+    }
 }
+
+
