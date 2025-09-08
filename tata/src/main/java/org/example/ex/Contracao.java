@@ -1,6 +1,6 @@
 package org.example.ex;
 
 public interface Contracao {
-    void contratar(Funcionario funcionario);
-    void demitir(Funcionario funcionario);
+    public abstract void admitir (Funcionario funcionario);
+    void demitir (Funcionario funcionario);
 }

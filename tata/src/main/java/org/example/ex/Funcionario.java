@@ -1,6 +1,6 @@
 package org.example.ex;
 
-public abstract class Funcionario  {
+public abstract class Funcionario implements Contracao {
     protected String mome;
     protected String DataNascimento;
     protected Sexo sexo;
@@ -53,6 +53,20 @@ public abstract class Funcionario  {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+    // Método abstrato para calcular o salário líquido
+
+    public abstract double getsalarioLiquido();
+
+    @Override
+    public void admitir(Funcionario funcionario) {
+        System.out.println( funcionario.toString() + " admitido com sucesso!");
+    }
+
+    @Override
+    public void demitir(Funcionario funcionario) {
+        System.out.println(funcionario.toString() + " demitido");
+
     }
 
     @Override
